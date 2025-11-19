@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Page 2 Example (Variable Check Grader)
+title: Password Checker: Conditional Controlled
 ---
 <div id="sortableTrash" class="sortable-code"></div> 
 <div id="sortable" class="sortable-code"></div> 

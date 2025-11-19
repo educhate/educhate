@@ -9,5 +9,20 @@
 
 .body{
   background-color: #BAFFC9;
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #BAFFC9;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #333333; /* good readable base colour */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: 600; /* or 700 for stronger headings */
+  margin-top: 1.4em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
 }

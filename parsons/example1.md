@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Password Checker: Conditional Controlled
+title: "Password Checker: Conditional Controlled"
 ---
 <div id="sortableTrash" class="sortable-code"></div> 
 <div id="sortable" class="sortable-code"></div> 

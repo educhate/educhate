@@ -1,42 +1,53 @@
-<head>
-  {%- include parsons-scripts.html -%}
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+  <head>
+    {%- include parsons-scripts.html -%}
+    {% if site.google_analytics %}
+      <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ site.google_analytics }}');
+      </script>
+    {% endif %}
+    <meta charset="UTF-8">
 
-  {% if site.google_analytics %}
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', '{{ site.google_analytics }}');
-    </script>
-  {% endif %}
+    <link href="https://js-parsons.github.io/js/js-parsons/parsons.css" rel="stylesheet" />
+    <link href="https://js-parsons.github.io/js/js-parsons/lib/prettify.css" rel="stylesheet" />
 
-  <meta charset="UTF-8">
+    <script src="https://js-parsons.github.io/js/js-parsons/lib/jquery.min.js"></script>
+    <script src="https://js-parsons.github.io/js/js-parsons/lib/jquery-ui.min.js"></script>
+    <script src="https://js-parsons.github.io/js/jquery.ui.touch-punch.min.js"></script>
+    <script src="https://js-parsons.github.io/js/js-parsons/lib/skulpt.js"></script>
+    <script src="https://js-parsons.github.io/js/js-parsons/lib/skulpt-stdlib.js"></script>
+    <script src="https://js-parsons.github.io/js/js-parsons/lib/underscore-min.js"></script>
+    <script src="https://js-parsons.github.io/js/js-parsons/lib/lis.js"></script>
+    <script src="https://js-parsons.github.io/js/js-parsons/lib/jquery.sound.js"></script>
+    <script src="https://js-parsons.github.io/js/js-parsons/lib/prettify.js"></script>
+    <script src="https://js-parsons.github.io/js/js-parsons/parsons.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <link href="https://js-parsons.github.io/js/js-parsons/parsons.css" rel="stylesheet" />
-  <link href="https://js-parsons.github.io/js/js-parsons/lib/prettify.css" rel="stylesheet" />
 
-  <script src="https://js-parsons.github.io/js/js-parsons/lib/jquery.min.js"></script>
-  <script src="https://js-parsons.github.io/js/js-parsons/lib/jquery-ui.min.js"></script>
-  <script src="https://js-parsons.github.io/js/jquery.ui.touch-punch.min.js"></script>
-  <script src="https://js-parsons.github.io/js/js-parsons/lib/skulpt.js"></script>
-  <script src="https://js-parsons.github.io/js/js-parsons/lib/skulpt-stdlib.js"></script>
-  <script src="https://js-parsons.github.io/js/js-parsons/lib/underscore-min.js"></script>
-  <script src="https://js-parsons.github.io/js/js-parsons/lib/lis.js"></script>
-  <script src="https://js-parsons.github.io/js/js-parsons/lib/jquery.sound.js"></script>
-  <script src="https://js-parsons.github.io/js/js-parsons/lib/prettify.js"></script>
-  <script src="https://js-parsons.github.io/js/js-parsons/parsons.js"></script>
+{% seo %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="stylesheet" href="{{ '/assets/css/style.scss?v=' | append: site.github.build_revision | relative_url }}">
+  </head>
+  <body>
+    <header class="page-header" role="banner">
+      <h1 class="project-name">{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
+      <h2 class="project-tagline">{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
+    </header>
 
-  {% seo %}
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#157878">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <main id="content" class="main-content" role="main">
+      {{ content }}
 
-  <!-- Load Open Sans -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-
-  <!-- IMPORTANT: link to compiled CSS, NOT .scss -->
-  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-</head>
+      <footer class="site-footer">
+      </footer>
+    </main>
+  </body>
+</html>

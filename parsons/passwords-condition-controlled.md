@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Password Checker: Conditional Controlled New"
+title: "Password Checker: Conditional Controlled"
 ---
 
 <div id="sortableTrash" class="sortable-code"></div> 
@@ -11,7 +11,11 @@ title: "Password Checker: Conditional Controlled New"
     <input id="feedbackLink" value="Get Feedback" type="button" /> 
     <input id="newInstanceLink" value="Reset Problem" type="button" /> 
 </p> 
+<p class="task-description">
+An algorithm is used to ensure a password is at least 7 characters in length. The user is repeatedly asked to enter a password until it is longer than 7 characters.​
 
+A counter is used to count how many attempts it took to create a "strong" password. The counter and allowed password is outputted
+</p> 
 <script type="text/javascript">
 var initial = "length = 0\n" +
     "count = 0\n" +

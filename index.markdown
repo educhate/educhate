@@ -17,6 +17,16 @@ Re-arrange the blocks below so they print out "Hello World!"
     <input id="p1-feedbackLink" value="Get Feedback" type="button" />
     <input id="p1-newInstanceLink" value="Reset Problem" type="button" />
 </p>
+
+<ul>
+  <li><a href="./parsons/passwords-condition-controlled.html">Passwords Condition Controlled</a></li>
+  <li><a href="page2.html">Page 2</a></li>
+  <li><a href="page3.html">Page 3</a></li>
+  <li><a href="contact.html">Contact Us</a></li>
+</ul>
+
+
+
 <script type="text/javascript">
 (function() {
   var initial = "print(\"Hello\")\n" +

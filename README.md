@@ -8,8 +8,6 @@ You can use [Codio's graphical Parson's problems generator](https://codio.github
 1. Create a Github account (if you don't have one already). A free account works great for this!
 
 1. Fork this repo using the "Fork" button 
-
-    ![Fork Button](https://sammyk.s3.amazonaws.com/blog/images/2014-05-28/fork.png)
     
 1. In **your fork** (it should have your user name after the `github.com/` in the URL bar) click on "Settings":
 

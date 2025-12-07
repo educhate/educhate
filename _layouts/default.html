@@ -107,14 +107,6 @@
         </div>
       </div>
     </nav>
-
-    <!-- Page header -->
-    <header id="pageHeader" class="page-header container py-2 mb-3 rounded">
-      <h1 class="project-name h4 mb-0 text-center">
-        {{ page.title | default: site.title }}
-      </h1>
-    </header>
-
     <!-- Main content -->
     <main id="content" class="main-content container" role="main">
       {{ content }}
@@ -135,17 +127,6 @@
           >
             <i class="bi bi-youtube"></i> YouTube
           </a>
-
-          <!-- Theme buttons -->
-          <button class="theme-button" onclick="setTheme('default')">Default</button>
-          <button class="theme-button" onclick="setTheme('cream')">Cream</button>
-          <button class="theme-button" onclick="setTheme('blue')">Soft blue</button>
-          <button class="theme-button" onclick="setTheme('high-contrast')">High contrast</button>
-
-          <!-- Font buttons -->
-          <button class="font-button" onclick="setFont('default')">Default font</button>
-          <button class="font-button" onclick="setFont('opendyslexic')">OpenDyslexic</button>
-        </div>
       </div>
     </footer>
 

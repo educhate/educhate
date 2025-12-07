@@ -12,7 +12,7 @@ body {
 body {
   display: flex;
   flex-direction: column;
-  background-color: #BAFFC9;
+  background-color: #cee0e9;
   font-family: 'Open Sans', Arial, sans-serif;
   font-weight: 400;
   line-height: 1.5;
@@ -165,17 +165,17 @@ body {
   background-color: transparent;
   width: 2rem;
   height: 2rem;
-  display: inline-flex;
+  display: none; 
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.5); /* dark circle */
+  
 }
 
 /* Custom chevrons */
 .carousel-control-prev-icon::after {
   content: '‹';
-  font-size: 2rem;
+  font-size: 1rem;
   line-height: 1;
   color: #ffffff;
 }

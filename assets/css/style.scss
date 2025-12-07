@@ -2,7 +2,7 @@
 ---
 @import "{{ site.theme }}";
 
-/* Layout: sticky footer */
+/* ===== Layout: sticky footer + full-height body ===== */
 html,
 body {
   height: 100%;
@@ -34,29 +34,23 @@ body {
   flex-shrink: 0;
 }
 
-/* Header overlay styles */
+/* ===== Header overlay via CSS variables ===== */
+:root {
+  --overlay-start: #0d6efd; /* default left colour */
+  --overlay-end:   #198754; /* default right colour */
+}
+
 #pageHeader {
+  background: linear-gradient(to right, var(--overlay-start), var(--overlay-end));
   color: #fff;
 }
 
-.overlay-1 {
-  background: linear-gradient(to right, #0d6efd, #198754);
-}
-
-.overlay-2 {
-  background: linear-gradient(to right, #9a233f, #3a8ecb);
-}
-
-.overlay-3 {
-  background: linear-gradient(to right, #343a40, #6c757d);
-}
-
-/* Footer styling */
+/* ===== Footer styling ===== */
 .site-footer {
   background-color: #212529; /* same as navbar bg-dark */
-  color: #f8f9fa;           /* Bootstrap text-light */
+  color: #f8f9fa;            /* Bootstrap text-light */
   padding: 0.75rem 1.25rem;
-  margin-top: auto;         /* ensures bottom alignment */
+  margin-top: auto;          /* ensures bottom alignment */
   border-top: 1px solid rgba(255,255,255,0.08);
   box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.25);
 }
@@ -77,7 +71,7 @@ body {
   gap: 0.5rem;
 }
 
-/* YouTube link – Option 2 styling */
+/* YouTube link – styled pill */
 .footer-link {
   display: inline-flex;
   align-items: center;
@@ -101,7 +95,7 @@ body {
   text-decoration: none;
 }
 
-/* Overlay button styled to match */
+/* Overlay toggle button styled to match */
 .site-footer #overlayToggle {
   background: none;
   color: #f8f9fa;
@@ -117,18 +111,7 @@ body {
   border-color: rgba(255,255,255,0.7);
 }
 
-/* Parsons area */
-.sortable-code {
-  width: 100%;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Open Sans', Arial, sans-serif;
-  font-weight: 600;
-  margin-top: 1.4em;
-  margin-bottom: 0.5em;
-  line-height: 1.2;
-}
+/* ===== Navbar dropdowns (Parson Puzzles multi-level) ===== */
 .dropdown-header {
   font-size: 0.8rem;
   font-weight: 600;
@@ -141,13 +124,14 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   background-color: rgba(13, 110, 253, 0.15);
 }
+
+/* Base width for dropdowns */
 .dropdown-menu {
   width: max-content;
   min-width: 260px;
 }
 
-
-/* Position the second-level dropdown to the right of the first */
+/* Second-level dropdown positioning */
 .dropdown-submenu .dropdown-menu {
   top: 0;
   left: 100%;
@@ -155,15 +139,14 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: .1rem;
 }
 
-/* Show the submenu on hover (desktop) */
+/* Show submenu on hover (desktop) */
 @media (min-width: 992px) {
   .navbar .dropdown-menu .dropdown-submenu:hover > .dropdown-menu {
     display: block;
   }
 }
 
-/* Optional: make category items look like real parents */
-/* Right-facing arrow for dropend submenus */
+/* Right-facing arrow for submenus */
 .dropdown-submenu > .dropdown-item.dropdown-toggle::after {
   float: right;
   border-top: .3em solid transparent;
@@ -173,62 +156,59 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: .45rem;
 }
 
+/* ===== Carousel arrows (override Bootstrap icons) ===== */
 
-/* Optional polish */
-.dropdown-item.active {
-  font-weight: 600;
-  background-color: rgba(13, 110, 253, 0.15);
-}
-/* Make carousel arrows visible on light backgrounds */
+/* Remove Bootstrap's default background-image icons */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 50%;
-  background-size: 60% 60%;
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-  width: 5%;
-}
-/* Completely override Bootstrap's carousel icons and draw our own */
-
-/* Reset Bootstrap defaults */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  background-image: none !important;  /* kill the SVG */
+  background-image: none !important;
   background-color: transparent;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5); /* dark circle */
 }
 
-/* Left arrow */
+/* Custom chevrons */
 .carousel-control-prev-icon::after {
-  content: '‹';           /* left chevron */
+  content: '‹';
   font-size: 2rem;
   line-height: 1;
   color: #ffffff;
 }
 
-/* Right arrow */
 .carousel-control-next-icon::after {
-  content: '›';           /* right chevron */
+  content: '›';
   font-size: 2rem;
   line-height: 1;
   color: #ffffff;
 }
 
-/* Optional: dark circular background so they pop on mint green */
+/* Control hitbox width */
 .carousel-control-prev,
 .carousel-control-next {
   width: 6%;
 }
 
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.5);
+/* Push content in from the edges inside each slide
+   (so arrows don't overlap text/buttons) */
+#homeCarousel .carousel-item > .d-flex {
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+
+/* ===== Misc styling ===== */
+.sortable-code {
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-weight: 600;
+  margin-top: 1.4em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
 }

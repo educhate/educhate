@@ -11,5 +11,7 @@ title: Home Page
   <li><a href="./parsons/petrol-station-easy.html">Petrol Station Easy</a></li>
   <li><a href="./parsons/number-guessing-challenge.html">Number Guessing Challenge</a></li>
    <li><a href="./parsons/square-area-perimeter.html">Square & Perimeter Measurement</a></li>
+  <li><a href="./parsons\count-controlled-word-counter.html">Count Controlled Word Counter</a></li>
+
   <li><a href="contact.html">Contact Us</a></li>
 </ul>

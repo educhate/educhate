@@ -30,10 +30,34 @@
   slug: exam-bonus-calculator
   category: Subprograms
 
-- title: Exam Bonus Calculator
-  slug: exam-bonus-calculator
-  category: Subprograms
-
 - title: File Handling with Selection
   slug: file-handling-selection
   category: File Handling
+
+# ───────────────
+# Christmas Tasks
+# ───────────────
+
+- title: "Christmas: Santa’s Reindeer Speed"
+  slug: christmas-santas-reindeer-speed
+  category: Christmas
+
+- title: "Christmas: Nice List Checker"
+  slug: christmas-nice-list-checker
+  category: Christmas
+
+- title: "Christmas: Toy Stock Table"
+  slug: christmas-toy-stock-table
+  category: Christmas
+
+- title: "Christmas: Advent Calendar Grid"
+  slug: christmas-advent-calendar-grid
+  category: Christmas
+
+- title: "Christmas: Reindeer Temperature Log"
+  slug: christmas-reindeer-temp-log
+  category: Christmas
+
+- title: "Christmas: Gift Rating Function"
+  slug: christmas-gift-rating-function
+  category: Christmas
